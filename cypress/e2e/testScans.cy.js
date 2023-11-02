@@ -1,18 +1,21 @@
 ///<reference types = 'Cypress'/>
 const loginPage = require('../support/PageObjects/LoginPage.js')
-const menuHeader = require('../support/PageObjects/MenuHeader.js')
+const liveScan = require('../support/PageObjects/LiveScan.js')
+const dashboardPage = require('../support/PageObjects/DashboardPage.js')
 
 
 describe('Validate New Scan Functionality', () => {
 
   beforeEach(()=>{
     cy.visit(Cypress.env('baseUrl'))
-    cy.get(menuHeader.loginButton)
+    cy.get(dashboardPage.login_Button)
     loginPage.loginIntoApplication()
 
   })
 
   it('Validate scan output using single valid url', () => {
+
+    liveScan.scanLink('www.gmail.com')
 
   })
   it('Validate scan output using  multiple url', () => {
@@ -31,7 +34,7 @@ describe('Validate New Scan Functionality', () => {
 
   })
   it('Verify scan output contains the IP address for valid source Url', () => {
-    
+
   })
 
 })

@@ -18,3 +18,4 @@ class LiveScan{
 
     }
 }
+module.exports = new LiveScan
