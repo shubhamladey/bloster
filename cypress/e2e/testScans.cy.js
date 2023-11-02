@@ -1,14 +1,14 @@
 ///<reference types = 'Cypress'/>
 const loginPage = require('../support/PageObjects/LoginPage.js')
 const liveScan = require('../support/PageObjects/LiveScan.js')
-const dashboardPage = require('../support/PageObjects/DashboardPage.js')
+const landingPage = require('../support/PageObjects/LandingPage.js')
 
 
 describe('Validate New Scan Functionality', () => {
 
   beforeEach(()=>{
     cy.visit(Cypress.env('baseUrl'))
-    cy.get(dashboardPage.login_Button)
+    cy.get(landingPage.login_Button)
     loginPage.loginIntoApplication()
 
   })
