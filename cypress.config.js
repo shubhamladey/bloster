@@ -9,7 +9,7 @@ module.exports = defineConfig({
     },
   },
   env:{
-    baseUrl: 'https://checkphish.ai',
+    baseUrl: 'https://checkphish.ai/domain-monitoring/',
     userName: 'shubhamladey7@gmail.com',
     password: 'Shubham@123'
   }
