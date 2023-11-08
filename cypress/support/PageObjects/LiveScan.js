@@ -22,7 +22,7 @@ class LiveScan{
         for(let i of linkurl){
             cy.get(this.links_textBox).type(linkurl+{enter})
         }
-        if(0 < linkurl.length || linkurl.length <10){
+        if(0 < linkurl.length || linkurl.length <=10){
             cy.get(this.scan_Button).click()
         }else{
             cy.get(this.scan_Button).should('be.disabled')
@@ -30,7 +30,7 @@ class LiveScan{
     }
 
     validateOutput(linkType,...linkurl){
-        if(0 < linkurl.length || linkurl.length <10){
+        if(0 < linkurl.length || linkurl.length <=10){
             if(linkType== 'valid'){
                 for(let i of linkurl){
                     //verify content on output tile

@@ -9,7 +9,7 @@ describe('Validate New Scan Functionality', () => {
   beforeEach(()=>{
     cy.visit(Cypress.env('baseUrl'),{failOnStatusCode:false})
     cy.get(landingPage.login_Button)
-    loginPage.loginIntoApplication()
+    loginPage.loginIntoApplication(Cypress.env('userName'),Cypress.env('password'))
 
   })
 

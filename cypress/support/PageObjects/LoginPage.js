@@ -5,10 +5,10 @@ class LoginPage{
     continueButton = 'button:contains("Continue")'
     loginButton = 'button[type="submit"]'
 
-    loginIntoApplication(){
-        cy.get(this.usernameField).type(Cypress.env('username'))
+    loginIntoApplication(username, password){
+        cy.get(this.usernameField).type(username)
         cy.get(this.continueButton).click()
-        cy.get(this.passwordField).type(Cypress.env('password'))
+        cy.get(this.passwordField).type(password)
         cy.get(this.loginButton).click()
     }
 
